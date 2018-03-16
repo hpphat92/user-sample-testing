@@ -1,6 +1,6 @@
 import angular from 'angular';
-import signinModule from "./signin";
+import pagesModule from "./pages";
 
-const mainModule = angular.module('app.main', [signinModule.name]);
+const mainModule = angular.module('app.main', [pagesModule.name]);
 
 export default mainModule;

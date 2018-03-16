@@ -1,0 +1,21 @@
+.signin-page {
+  width: 55%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #eee;
+  background: #fefefe;
+  min-height: 30vh;
+  box-shadow: 0px 0px 10px 5px #eee;
+  .header {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .row {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

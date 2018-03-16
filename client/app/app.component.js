@@ -1,5 +1,5 @@
 import template from './app.component.html';
-import './app.component.scss';
+import './app.scss';
 
 const AppComponent = {
   template

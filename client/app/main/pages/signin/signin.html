@@ -1,0 +1,37 @@
+<form class="signin-page" name="signinForm" novalidate>
+    <div class="row header">
+        <div class="col-md-12 text-center">
+            Signin
+        </div>
+    </div>
+    <div class="row form-group" ng-class="{'has-error': !signinForm.email.$pristine && !signinForm.email.$valid}">
+        <div class="col-md-2 control-label">
+            Email
+        </div>
+        <div class="col-md-10">
+            <input type="email" ng-model="signinModel.email" required name="email" class="form-control">
+            <div class="text-danger" ng-show="signinForm.email.$dirty && signinForm.email.$error.email">Email is invalid</div>
+            <div class="text-danger" ng-show="signinForm.email.$dirty && signinForm.email.$error.required">Email is required</div>
+        </div>
+    </div>
+    <div class="row form-group" ng-class="{'has-error': !signinForm.password.$pristine && !signinForm.password.$valid}">
+        <div class="col-md-2 control-label">
+            Password
+        </div>
+        <div class="col-md-10">
+            <input type="password" ng-model="signinModel.password" name="password" required class="form-control">
+            <div class="text-danger" ng-show="signinForm.password.$dirty && signinForm.password.$error.required">Password is required</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <button class="btn btn-primary btn-block" type="submit" ng-click="login()" ng-disabled="signinForm.$invalid">
+                Login
+            </button>
+        </div>
+        <div class="col-md-12 register-link">
+            Don't have account? <a href="/#/pages/register">Register</a>.
+        </div>
+    </div>
+</form>
+</div>
