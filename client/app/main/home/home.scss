@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .sub {
+    font-style: italic;
+    color: #333;
+    font-size: 20px;
+  }
+}
