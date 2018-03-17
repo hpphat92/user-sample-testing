@@ -3,83 +3,71 @@
         User Management
     </div>
 </div>
-<form class="signin-page" name="registerForm" novalidate>
+<form class="signin-page" name="userForm" novalidate>
     <div class="row header">
         <div class="col-md-12 text-center">
             User Edit
         </div>
     </div>
-    <div class="row form-group" ng-class="{'has-error': !registerForm.name.$pristine && !registerForm.name.$valid}">
+    <div class="row form-group" ng-class="{'has-error': !userForm.name.$pristine && !userForm.name.$valid}">
         <div class="col-md-2 control-label">
             Name<span class="red">*</span>
         </div>
         <div class="col-md-10">
-            <input type="text" ng-model="registerModel.name" required name="name" class="form-control">
-            <div class="text-danger" ng-show="registerForm.name.$dirty && registerForm.name.$error.required">Name is
+            <input type="text" ng-model="userModel.name" required name="name" class="form-control">
+            <div class="text-danger" ng-show="userForm.name.$dirty && userForm.name.$error.required">Name is
                 required
             </div>
         </div>
     </div>
     <div class="row form-group"
-         ng-class="{'has-error': !registerForm.firstName.$pristine && !registerForm.firstName.$valid}">
+         ng-class="{'has-error': !userForm.firstName.$pristine && !userForm.firstName.$valid}">
         <div class="col-md-2 control-label">
             First Name<span class="red">*</span>
         </div>
         <div class="col-md-10">
-            <input type="text" ng-model="registerModel.firstName" required name="firstName" class="form-control">
-            <div class="text-danger" ng-show="registerForm.firstName.$dirty && registerForm.firstName.$error.required">
+            <input type="text" ng-model="userModel.firstName" required name="firstName" class="form-control">
+            <div class="text-danger" ng-show="userForm.firstName.$dirty && userForm.firstName.$error.required">
                 First Name is required
             </div>
         </div>
     </div>
     <div class="row form-group"
-         ng-class="{'has-error': !registerForm.lastName.$pristine && !registerForm.lastName.$valid}">
+         ng-class="{'has-error': !userForm.lastName.$pristine && !userForm.lastName.$valid}">
         <div class="col-md-2 control-label">
             Last Name<span class="red">*</span>
         </div>
         <div class="col-md-10">
-            <input type="text" ng-model="registerModel.lastName" required name="lastName" class="form-control">
-            <div class="text-danger" ng-show="registerForm.lastName.$dirty && registerForm.lastName.$error.required">
+            <input type="text" ng-model="userModel.lastName" required name="lastName" class="form-control">
+            <div class="text-danger" ng-show="userForm.lastName.$dirty && userForm.lastName.$error.required">
                 Last Name is required
             </div>
         </div>
     </div>
-    <div class="row form-group" ng-class="{'has-error': !registerForm.email.$pristine && !registerForm.email.$valid}">
+    <div class="row form-group" ng-class="{'has-error': !userForm.email.$pristine && !userForm.email.$valid}">
         <div class="col-md-2 control-label">
             Email<span class="red">*</span>
         </div>
         <div class="col-md-10">
-            <input type="email" ng-model="registerModel.email" required name="email" class="form-control">
-            <div class="text-danger" ng-show="registerForm.email.$dirty && registerForm.email.$error.email">Email is
+            <input type="email" ng-model="userModel.email" required name="email" class="form-control">
+            <div class="text-danger" ng-show="userForm.email.$dirty && userForm.email.$error.email">Email is
                 invalid
             </div>
-            <div class="text-danger" ng-show="registerForm.email.$dirty && registerForm.email.$error.required">Email is
+            <div class="text-danger" ng-show="userForm.email.$dirty && userForm.email.$error.required">Email is
                 required
-            </div>
-        </div>
-    </div>
-    <div class="row form-group"
-         ng-class="{'has-error': !registerForm.password.$pristine && !registerForm.password.$valid}">
-        <div class="col-md-2 control-label">
-            Password<span class="red">*</span>
-        </div>
-        <div class="col-md-10">
-            <input type="password" ng-model="registerModel.password" name="password" required class="form-control">
-            <div class="text-danger" ng-show="registerForm.password.$dirty && registerForm.password.$error.required">
-                Password is required
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <button class="btn btn-primary btn-block" type="submit" ng-click="register()"
-                    ng-disabled="registerForm.$invalid">
-                Register
+            <button class="btn btn-primary btn-block" type="submit" ng-click="saveInfo()"
+                    ng-disabled="userForm.$invalid || userForm.$submitted">
+                Update Info
             </button>
         </div>
-        <div class="col-md-12 register-link">
-            Already have account? <a href="/#/pages/signin">Signin</a>.
-        </div>
+        <!--<div class="col-md-12 register-link">-->
+            <!--Already have account? <a href="/#/pages/signin">Signin</a>.-->
+        <!--</div>-->
     </div>
 </form>
 </div>

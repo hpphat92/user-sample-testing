@@ -6,7 +6,8 @@
     <title><%- htmlWebpackPlugin.options.pkg.title %></title>
 </head>
 <body ng-app="app" ng-strict-di ng-cloak>
-   <ui-view></ui-view>
+<toaster-container></toaster-container>
+<ui-view></ui-view>
 </body>
 <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
 </html>
