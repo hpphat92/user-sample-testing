@@ -9,6 +9,7 @@ Built upon `https://www.npmjs.com/package/angular-1.5-cli`
 
 ## Running
 `npm run serve` OR `npm start`
+Go to `http://localhost:8080`
 
 ## Building
 
